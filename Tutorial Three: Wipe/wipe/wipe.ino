@@ -1,7 +1,7 @@
 //Tyler Krupicka
 //7/5/15
-//Strobe.ino
-//This project modifies the last project to flash with a time variable
+//Wipe.ino
+//This project sets the entire strip to a color with a wipe animation.
 
 //Includes
 #include <Adafruit_NeoPixel.h> //the neopixel library
@@ -9,7 +9,7 @@
 
 //Defines
 #define PIN 6 //pin number of arduino data connection
-#define WAIT 100 //delay amount in milliseconds
+#define WAIT 50 // time to wait between pixel changes
 
 //create a Adafruit_NeoPixel named "strip". Our strip has 60 LEDs and is in pin 6
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(60, PIN, NEO_GRB + NEO_KHZ800);
@@ -40,23 +40,9 @@ void loop() {
     //show the changes
     strip.show();
     
-  }
-  
-  //we need to hold the magenta color before flashing to black
-  delay(WAIT);
-  
-  //in order for the strip to flash it needs to go to black
-  //setting the strip to black is the same as setting it to color except the RGB code is 0s
-  uint32_t black = strip.Color(255, 0, 255); 
-  
-  for(int i = 0; i < strip.numPixels(); i++){
-    
-    strip.setPixelColor(i, black);
-    strip.show();
+    //in order to do a wipe we need to just wait between changes
+    delay(WAIT);
     
   }
-  
-  //we need to hold black before going back
-  delay(WAIT);
   
 }
