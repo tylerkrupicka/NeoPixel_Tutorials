@@ -28,7 +28,8 @@ void setup() {
 //loop
 void loop() {
   
-  int current_color = 1;
+  //initialize to be the first color originally
+  int current_color = 2;
   
   //create colors
   uint32_t magenta = strip.Color(255, 0, 255); // this creates a color with RGB values 255, 0 , 255
@@ -36,11 +37,14 @@ void loop() {
   uint32_t color; //we need a blank color that will alternate between the two
   
   //toggle between colors
-  if( current_color = 1 ){
+  //if statement: runs if condition is true (else otherwise)
+  if( current_color == 1 ){
     current_color = 2;
+    color = blue;
   }
   else{
-     current_color = 1; 
+     current_color = 1;
+     color = magenta; 
   }
   
   //generate random numbers
@@ -65,19 +69,18 @@ void loop() {
     
     //show changes
     strip.show();
-    //wait
+    //wait (cause a pause between lighting up)
     delay(WAIT);
     
     //if statement: only run if condition is met
-    if(top < strip.numPixels()){
+    if(top < strip.numPixels()){ //top goes up until max is met
       top = top + 1; 
     }
-    if(bottom > 0){
+    if(bottom > 0){ //bottom goes down only if greater than 0 (no negative pixels)
       bottom = bottom - 1; 
     }
     
   }
-  
   
 }
 
