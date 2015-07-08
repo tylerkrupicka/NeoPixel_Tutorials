@@ -9,7 +9,6 @@
 
 //Defines
 #define PIN 6 //pin number of arduino data connection
-#define WAIT 50 // time to wait between pixel changes
 #define BRIGHT 100 //lets define the brightness here
 
 //create a Adafruit_NeoPixel named "strip". Our strip has 60 LEDs and is in pin 6
@@ -42,7 +41,7 @@ void loop() {
     //count from 0 to 60, setting to the color
     //the difference from before is we need to set the one previous to black so only one is lit
     for(int i = 0; i < strip.numPixels(); i++){
-
+      
       strip.setPixelColor(i, magenta);
       
       //we cant turn the one previous to black if were at 0
@@ -52,7 +51,9 @@ void loop() {
       }
       
       strip.show();    
-      delay(WAIT);
+      
+      //now it will delay anywhere between 1 and 60 causing an odd speed change. cool
+      delay(i);
       
     }
     //set bounceBack to true so it returns to the start
@@ -74,7 +75,7 @@ void loop() {
       }
       
       strip.show();    
-      delay(WAIT);
+      delay(i);
       
     }
     //set bounceBack to false so it goes up again

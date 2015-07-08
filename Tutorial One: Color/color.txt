@@ -1,0 +1,10 @@
+Tutorial One: Color
+
+Set the entire strip to a single color. Try to design the program before looking
+at my code for assistance.
+
+Hints:
+
+Define a color
+Loops do things repeatedly (for each element)
+Set each pixel as you loop

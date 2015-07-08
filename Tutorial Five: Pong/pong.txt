@@ -1,0 +1,15 @@
+Five: pong
+
+make a single pixel light up and bounce back and forth (like pong)
+
+Hints:
+
+Youll have to toggle forward and backward to go back and forth
+youll either need to set the pixel behind or in front to black so that only one pixel is lit (no wipe effect)
+I recommend modifying wipe to make the effect
+
+pong2
+
+edit your program to make the speed change based on which pixel is lit.
+
+(edit two lines)

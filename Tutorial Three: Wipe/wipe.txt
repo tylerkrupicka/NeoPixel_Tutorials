@@ -1,0 +1,8 @@
+Tutorial Three: Wipe
+
+Modify your original code for setting a color to make it delay between
+each change (causing the usual moving color effect).
+
+Hints:
+
+You should only add one line.

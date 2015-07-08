@@ -1,0 +1,5 @@
+Six: Functions
+
+I haven't finished making a solution yet, but make all of the previous effects in to
+callable functions with color parameters. That way you can transition through effects
+and colors.

@@ -1,0 +1,10 @@
+Tutorial Two: Strobe
+
+Modify your code from the first project to flash repeatedly.
+
+Hints:
+
+Set the strip to a color
+Wait
+Set the strip to black
+Wait

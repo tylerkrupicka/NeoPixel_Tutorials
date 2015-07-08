@@ -11,6 +11,14 @@
 #define PIN 6 //pin number of arduino data connection
 #define WAIT 100 //delay amount in milliseconds
 
+//initialize to be the first color originally
+int current_color = 2;
+
+//create colors
+uint32_t magenta = strip.Color(255, 0, 255); // this creates a color with RGB values 255, 0 , 255
+uint32_t blue = strip.Color(0, 0, 255); 
+uint32_t color; //we need a blank color that will alternate between the two
+
 //create a Adafruit_NeoPixel named "strip". Our strip has 60 LEDs and is in pin 6
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(60, PIN, NEO_GRB + NEO_KHZ800);
 
@@ -27,14 +35,6 @@ void setup() {
 
 //loop
 void loop() {
-  
-  //initialize to be the first color originally
-  int current_color = 2;
-  
-  //create colors
-  uint32_t magenta = strip.Color(255, 0, 255); // this creates a color with RGB values 255, 0 , 255
-  uint32_t blue = strip.Color(0, 0, 255); 
-  uint32_t color; //we need a blank color that will alternate between the two
   
   //toggle between colors
   //if statement: runs if condition is true (else otherwise)

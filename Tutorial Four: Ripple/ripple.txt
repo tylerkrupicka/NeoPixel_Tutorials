@@ -1,0 +1,15 @@
+Four: Ripple
+
+Create the ripple effect (random point outward expanding) that we made first.
+Choose a random number, use print to print it.
+Alternate between two set colors to ripple over the top of each other.
+
+Hints:
+
+youll need to toggle between color one or two each loop cycle
+generate a random number
+create two variables to go either direction
+use a loop to move outwards
+dont exceed the limits of the strip
+
+This one is much more difficult so i recommend writing it out and working one piece at a time.
