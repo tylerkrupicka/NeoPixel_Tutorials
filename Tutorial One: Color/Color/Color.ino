@@ -10,11 +10,11 @@
 //Defines
 #define PIN 6 //pin number of arduino data connection
 
-//Colors
-uint32_t magenta = strip.Color(255, 0, 255); // this creates a color with RGB values 255, 0 , 255
-
 //create a Adafruit_NeoPixel named "strip". Our strip has 60 LEDs and is in pin 6
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(60, PIN, NEO_GRB + NEO_KHZ800);
+
+//Colors
+uint32_t magenta = strip.Color(255, 0, 255); // this creates a color with RGB values 255, 0 , 255
 
 //setup will be run once at the start
 void setup() {
